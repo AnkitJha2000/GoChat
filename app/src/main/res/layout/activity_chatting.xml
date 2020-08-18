@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#CCCCCC"
+    android:layout_height="match_parent"
+    tools:context=".ChattingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_chat_user"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"                android:id="@+id/backtoMainChat"
+                android:background="@drawable/ic_baseline_arrow_back_24"
+                />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/backtoMainChat"
+                android:layout_marginStart="5dp"
+                android:id="@+id/user_chat_profile"
+                android:background="@drawable/profile"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Display Name"
+                android:layout_toEndOf="@id/user_chat_profile"
+                android:textColor="#000000"
+                android:id="@+id/user_chat_display_name"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Seen"
+                android:id="@+id/last_seen"
+                android:layout_toRightOf="@id/user_chat_profile"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/user_chat_display_name"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/message_swipe_layout"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_chat_user"
+        android:layout_above="@id/chat_custom_bar"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar_chat_user"
+            android:layout_above="@id/chat_custom_bar"
+            android:id="@+id/message_recycler"
+            />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/chat_custom_bar"
+        android:layout_alignParentBottom="true"
+        android:background="#DAD5D5"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/addfile"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_baseline_add_24"
+                />
+            <EditText
+                android:hint="Type Message"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/addfile"
+                android:layout_marginStart="5dp"
+                android:id="@+id/msg_text"
+                android:layout_marginEnd="60dp"
+                />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/send_btn"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ic_baseline_send_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

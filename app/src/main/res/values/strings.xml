@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Go Chat</string>
+    <string name="new_user_sign_up"><u>New User? Sign Up</u></string>
+    <string name="already_a_user_sign_in"><u>Already A User? Sign IN</u></string>
+    <string name="log_out">Log Out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="restore_defaults"><u>Restore Defaults</u></string>
+    <string name="hi_there_i_am_using_go_chat">Hi there! I am using GO chat</string>
+    <string name="yes">YES</string>
+</resources>
